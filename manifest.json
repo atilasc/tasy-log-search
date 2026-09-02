@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Tasy Log Search",
+  "version": "1.0",
+  "description": "Filtra arquivos de log e requisições do Tasy por palavras-chave.",
+  "icons": {
+    "16": "logo-Tasy.png",
+    "32": "logo-Tasy.png",
+    "48": "logo-Tasy.png",
+    "128": "logo-Tasy.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://dominio.com.br/*wheb_arquivo.jsp*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["logo-Tasy.png"],
+      "matches": ["*://dominio.com.br/*"]
+    }
+  ]
+}
